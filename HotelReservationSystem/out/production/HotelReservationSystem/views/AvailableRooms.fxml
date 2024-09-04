@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AvailableRooms">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@pexels-kelly-2869215.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="16.0" layoutY="14.0" text="WisteriaLane Hotel and Resort Reservation System" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutY="107.0" prefHeight="30.0" prefWidth="600.0" />
+      <Label layoutX="179.0" layoutY="81.0" text="No of Available rooms: " textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="availableRooms" layoutX="353.0" layoutY="81.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="179.0" layoutY="137.0" prefHeight="217.0" prefWidth="234.0">
+        <columns>
+          <TableColumn fx:id="roomNumber" prefWidth="120.0" text="Room Number" />
+          <TableColumn fx:id="roomType" prefWidth="113.0" text="Room Type" />
+        </columns>
+      </TableView>
+      <Button layoutX="16.0" layoutY="69.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="33.0" text="&lt;&lt;" />
+   </children>
+</AnchorPane>

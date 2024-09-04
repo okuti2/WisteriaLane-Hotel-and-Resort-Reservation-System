@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BillLookup">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@pexels-kelly-2869215.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="16.0" layoutY="14.0" text="WisteriaLane Hotel and Resort Reservation System" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="140.0" layoutY="58.0" prefHeight="55.0" prefWidth="261.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="95.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="166.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="firstandlast" prefHeight="25.0" prefWidth="126.0" GridPane.columnIndex="1" />
+            <Label text="Guest Last Name" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Phone Number" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Bodoni MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button layoutX="430.0" layoutY="73.0" mnemonicParsing="false" onAction="#searchBills" prefHeight="25.0" prefWidth="66.0" text="Search">
+         <font>
+            <Font name="Bodoni MT Bold" size="14.0" />
+         </font>
+      </Button>
+      <Separator layoutY="120.0" prefWidth="600.0" />
+      <TableView fx:id="BillTable" layoutX="9.0" layoutY="143.0" prefHeight="200.0" prefWidth="583.0">
+        <columns>
+          <TableColumn fx:id="bookID" prefWidth="73.0" text="Booking ID" />
+          <TableColumn fx:id="guestName" prefWidth="126.33332824707031" text="Guest Name" />
+            <TableColumn fx:id="checkIn" prefWidth="84.33334350585938" text="Check-In" />
+            <TableColumn fx:id="checkOut" minWidth="0.0" prefWidth="86.66665649414062" text="Check-Out" />
+            <TableColumn fx:id="paidAmount" prefWidth="99.33334350585938" text="Paid Amount" />
+            <TableColumn fx:id="admin" prefWidth="75.0" text="admin" />
+        </columns>
+      </TableView>
+      <Button layoutX="22.0" layoutY="74.0" mnemonicParsing="false" onAction="#back" text="&lt;&lt;">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
